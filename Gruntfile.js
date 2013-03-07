@@ -1,13 +1,14 @@
 module.exports = function(grunt){
 
 	["grunt-crx"].forEach(function(v){ grunt.loadNpmTasks(v) })
-
 	grunt.initConfig({
-		"crx": {
-			"notifactory": {
+		manifest: grunt.file.readJSON("crx/manifest.json"),
+		pkg: grunt.file.readJSON("package.json"),
+		crx: {
+			notifactory: {
 				src: "crx",
-				dest: "dist/crx",
-				privateKey: "~/.ssh/chrome-apps.pem"
+				dest: "dist",
+				privateKey: "/home/rektide/.ssh/chrome-apps.pem"
 		}}
 	})
 
