@@ -8,7 +8,8 @@ module.exports = function(grunt){
 			notifactory: {
 				src: "crx",
 				dest: "dist",
-				privateKey: "/home/rektide/.ssh/chrome-apps.pem"
+				privateKey: "/home/rektide/.ssh/chrome-apps.pem",
+				baseURL: "http://gk.xn--theric.oua.net/notifactory/"
 		}}
 	})
 
