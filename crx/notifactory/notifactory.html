@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Notifactor</title>
+</head>
+<body>
+<script type="text/javascript">
+// boilerplate opening event-listener loaded opening stanza
+window.addEventListener("load", function() {
+
+if(!window.webkitIntent){
+	console.error("no webkitIntent")
+	return
+}
+
+if(window.webkitIntent.type != "application/notifactory+json"){
+	console.error("Unimplimented type "+window.webkitIntent.type)
+	return
+}
+
+if(window.webkitIntent.action != "notify"){
+	console.error("Unimplemented action "+window.webkitIntent.action)
+	return
+}
+
+var d= window.webkitIntent.data
+
+if(!d.title){
+	console.error("No title specified")
+	return
+}
+
+console.log("data",d)
+
+var notification = webkitNotifications.createNotification(
+	null,  // icon url
+	d.title,  // notification title
+	d.text  // notification body text
+)
+notification.show()
+
+}, false)
+</script>
+</body>
+</html>

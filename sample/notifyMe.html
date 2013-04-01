@@ -1,0 +1,26 @@
+<html>
+<head>
+	
+</head>
+<body>
+
+<button id="notify" value="notify"/>
+
+<script>
+document
+  .getElementById("notify")
+  .addEventListener("click", function(e){
+	var params = {
+		action: "http://schema.eldergods.com/notifactory",
+		type: "application/notifactory+json",
+		title: "A Notification Appears!",
+		text: "Do you hazard the approach?"
+	  }
+	window.navigator.webkitStartActivity(new WebKitIntent(params), function(data) {
+		console.log("notifaction acked",data)
+	})
+}, false)
+</script>
+
+</body>
+</html>
