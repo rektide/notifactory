@@ -7,10 +7,6 @@
 		"urls": [
 			"*://gk.xn--theric-oua.net/notifactory/"
 		],
-		"background": {
-			"scripts": ["notifactory-we.js"],
-			"persistent": "false"
-		},
 		"launch": {
 			"web_url": "http://gk.xn-theric-oua.net/notifatory/"
 		}
@@ -19,21 +15,9 @@
 	"update_url": "http://gk.xn--theric.oua.net/notifactory/updates.xml",
 	"intents": {
 		"http://xn--theric-oua.net/notifactory": {
-			"type": ["application/notifactor+json"],
-			"href": "/notifactory/notifactor",
+			"type": ["application/notifactory+json"],
+			"href": "/notifactory/notifactory.html",
 			"title": "Notifactory Notifactor Display",
-			"disposition": "window"
-		},
-		"http://xn--theric-oua.net/notifactor": {
-			"type": ["application/notifactor+json"],
-			"href": "/notifactory/notifactor",
-			"title": "Notifactory Notifactor Display",
-			"disposition": "window"
-		},
-		"http://webintents.org/view": {
-			"type": ["application/atom+xml"],
-			"href": "/notifactory/notifactor-feed",
-			"title": "Notifactory Notifactor Feed Display",
 			"disposition": "window"
 		}
 	},
@@ -44,9 +28,6 @@
 	],
 	"offline_enabled": true,
 	"web_accessible_resoures": [
-		"notifactory/notifactor",
-		"notifactory/notifactor-feed",
-		"notifactory/notifactory-we.js",
-		"notifactory/"
+		"notifactory/notifactory.html"
 	]
 }
